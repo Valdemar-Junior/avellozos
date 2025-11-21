@@ -1,11 +1,12 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
-import OsNew from './pages/OsNew'
+import Home from './pages/Home'
+import OsEdit from './pages/OsEdit'
 
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/os/nova" replace />} />
-      <Route path="/os/nova" element={<OsNew />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/os/:id" element={<OsEdit />} />
     </Routes>
   )
 }

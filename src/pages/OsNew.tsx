@@ -16,6 +16,7 @@ export default function OsNew() {
   const [saving, setSaving] = useState(false)
   const [saveMessage, setSaveMessage] = useState<string | null>(null)
   const [rawPayload, setRawPayload] = useState<any>(null)
+  const TABLE = (import.meta as any).env.VITE_SUPABASE_TABLE_OS || 'ordens_servico'
 
   async function buscarVenda() {
     setLoading(true)
@@ -70,14 +71,7 @@ export default function OsNew() {
   return (
     <div className="min-h-screen app-bg text-gray-100">
       <div className="max-w-6xl mx-auto px-6 py-10">
-        <header className="mb-8">
-          <div className="flex items-center justify-center gap-3">
-            <div className="bg-white rounded-xl p-2 shadow">
-              <img src="/logo.png" alt="Logo" className="w-12 h-12 object-contain" />
-            </div>
-            <h1 className="text-4xl font-bold text-brand-400 text-center">Gerar Ordem de Serviço</h1>
-          </div>
-        </header>
+        
 
         <section className="card p-6 mb-6">
           <div className="flex flex-col md:flex-row gap-4 items-end">
@@ -249,7 +243,7 @@ export default function OsNew() {
                         observacoes: `Loja: ${obsLoja || ''}\nCliente: ${obsCliente || ''}`
                       }
                       const { error: insertError } = await getSupabase()
-                        .from('ordens_servico')
+                        .from(TABLE)
                         .insert(row)
                       if (insertError) {
                         throw new Error(insertError.message)
