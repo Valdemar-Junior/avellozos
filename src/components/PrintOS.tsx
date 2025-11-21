@@ -54,8 +54,8 @@ export default function PrintOS({ venda, tipoServico, observacaoLoja, observacao
             <h2 className="text-lg font-semibold mb-2">Dados da Loja</h2>
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div>
-                <p className="font-medium">AVELLOZ ASSU</p>
-                <p>Av. Senador João Câmara, 1236 – Dom Eliseu</p>
+                <p className="font-medium">AVELLOZ ASSÚ</p>
+                <p>Av. Senador João Câmara, 1236 – Dom Elizeu</p>
                 <p>ASSÚ/RN</p>
               </div>
               <div>
@@ -127,7 +127,7 @@ export default function PrintOS({ venda, tipoServico, observacaoLoja, observacao
           <div className="mt-12">
             <div className="border-t border-gray-300 w-64 mx-auto pt-2 text-center text-sm">
               <p className="font-medium">Assinatura do Responsável</p>
-              <p className="text-gray-600">AVELLOZ ASSU</p>
+              <p className="text-gray-600">AVELLOZ ASSÚ</p>
             </div>
           </div>
 
