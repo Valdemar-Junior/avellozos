@@ -93,7 +93,6 @@ export default function PrintOS({ venda, tipoServico, observacaoLoja, observacao
                   <th className="text-left py-2">Código</th>
                   <th className="text-left py-2">Produto</th>
                   <th className="text-right py-2">Qtd</th>
-                  <th className="text-right py-2">Valor Unit.</th>
                 </tr>
               </thead>
               <tbody>
@@ -103,7 +102,6 @@ export default function PrintOS({ venda, tipoServico, observacaoLoja, observacao
                     <td className="py-2">{item.codigo_produto}</td>
                     <td className="py-2">{item.nome_produto}</td>
                     <td className="py-2 text-right">{item.quantidade_vendida}</td>
-                    <td className="py-2 text-right">R$ {item.valor_unitario.toFixed(2)}</td>
                   </tr>
                 ))}
               </tbody>

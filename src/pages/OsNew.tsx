@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Search, Save, User, Package, FileText } from 'lucide-react'
+import { Search, Save, User, Package, Bike } from 'lucide-react'
 import clsx from 'clsx'
 import PrintOS from '../components/PrintOS'
 import type { Venda } from '../types'
@@ -68,14 +68,15 @@ export default function OsNew() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100">
-      <div className="max-w-5xl mx-auto px-4 py-8">
+    <div className="min-h-screen app-bg text-gray-100">
+      <div className="max-w-6xl mx-auto px-6 py-10">
         <header className="mb-8">
-          <h1 className="text-3xl font-bold text-brand-400 flex items-center gap-3">
-            <FileText className="w-8 h-8" />
-            Gerar Ordem de Serviço
-          </h1>
-          <p className="text-gray-400 mt-2">Pesquise a venda e crie a OS com estilo</p>
+          <div className="flex items-center justify-center gap-3">
+            <div className="bg-white rounded-xl p-2 shadow">
+              <img src="/logo.png" alt="Logo" className="w-12 h-12 object-contain" />
+            </div>
+            <h1 className="text-4xl font-bold text-brand-400 text-center">Gerar Ordem de Serviço</h1>
+          </div>
         </header>
 
         <section className="card p-6 mb-6">
@@ -174,21 +175,14 @@ export default function OsNew() {
                 Itens vendidos
               </h2>
               <div className="space-y-3">
-                {venda.itens_vendidos.map((item) => (
-                  <div key={item.sequencia_item} className="border border-gray-700 rounded-lg p-4 bg-gray-800/50">
-                    <div className="flex items-start justify-between mb-2">
-                      <div className="flex items-center gap-2">
-                        <span className="badge">Seq {item.sequencia_item}</span>
-                        <span className="text-gray-400">Cód {item.codigo_produto}</span>
-                      </div>
-                      <span className="text-gray-400">Qtd {item.quantidade_vendida}</span>
-                    </div>
-                    <p className="text-gray-300 text-sm mb-2">{item.nome_produto}</p>
-                    <div className="flex justify-end">
-                      <span className="font-semibold text-brand-400">R$ {item.valor_unitario.toFixed(2)}</span>
-                    </div>
-                  </div>
-                ))}
+            {venda.itens_vendidos.map((item) => (
+              <div key={item.sequencia_item} className="border border-gray-700 rounded-lg p-4 bg-gray-800/50">
+                <div className="flex items-start gap-3">
+                  <Bike className="w-7 h-7 text-gray-400" />
+                  <p className="text-gray-300 text-sm">{item.nome_produto}</p>
+                </div>
+              </div>
+            ))}
               </div>
             </section>
 
@@ -270,8 +264,8 @@ export default function OsNew() {
                   disabled={!venda || !tipoServico || saving}
                   className={clsx('btn btn-primary', saving && 'opacity-70')}
                 >
-                  <Save className="w-4 h-4 mr-2" />
-                  {saving ? 'Salvando...' : 'Salvar OS'}
+                 <Save className="w-4 h-4 mr-2" />
+                 {saving ? 'Salvando...' : 'Salvar OS'}
                 </button>
                 {venda && tipoServico && (
                   <PrintOS venda={venda} tipoServico={tipoServico} observacaoLoja={obsLoja} observacaoCliente={obsCliente} />
