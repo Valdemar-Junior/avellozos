@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { useReactToPrint } from 'react-to-print'
 import type { Venda, ItemVendido } from '../types'
+import { Bike } from 'lucide-react'
 
 const logoUrl = '/logo.png'
 
@@ -89,7 +90,7 @@ export default function PrintOS({ venda, tipoServico, observacaoLoja, observacao
             <div className="space-y-2">
               {venda.itens_vendidos.map((item: ItemVendido) => (
                 <div key={item.sequencia_item} className="flex items-start gap-2 border-b border-gray-200 pb-2">
-                  <img src="/moto.svg" className="w-5 h-5 opacity-60" />
+                  <Bike className="w-5 h-5 text-gray-500" />
                   <p className="text-sm">{item.nome_produto}</p>
                 </div>
               ))}
