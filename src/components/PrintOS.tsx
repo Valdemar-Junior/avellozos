@@ -86,26 +86,14 @@ export default function PrintOS({ venda, tipoServico, observacaoLoja, observacao
           {/* Itens */}
           <div className="mb-6">
             <h2 className="text-lg font-semibold mb-2">Itens da Venda</h2>
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-gray-300">
-                  <th className="text-left py-2">Seq</th>
-                  <th className="text-left py-2">Código</th>
-                  <th className="text-left py-2">Produto</th>
-                  <th className="text-right py-2">Qtd</th>
-                </tr>
-              </thead>
-              <tbody>
-                {venda.itens_vendidos.map((item: ItemVendido) => (
-                  <tr key={item.sequencia_item} className="border-b border-gray-200">
-                    <td className="py-2">{item.sequencia_item}</td>
-                    <td className="py-2">{item.codigo_produto}</td>
-                    <td className="py-2">{item.nome_produto}</td>
-                    <td className="py-2 text-right">{item.quantidade_vendida}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <div className="space-y-2">
+              {venda.itens_vendidos.map((item: ItemVendido) => (
+                <div key={item.sequencia_item} className="flex items-start gap-2 border-b border-gray-200 pb-2">
+                  <img src="/moto.svg" className="w-5 h-5 opacity-60" />
+                  <p className="text-sm">{item.nome_produto}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Serviço */}
