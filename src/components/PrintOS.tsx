@@ -133,7 +133,7 @@ export default function PrintOS({ venda, tipoServico, observacaoLoja, observacao
 
           {/* Rodapé */}
           <div className="mt-8 text-center text-xs text-gray-500">
-            <p>Av. Senador João Câmara, 1236 – Dom Eliseu, ASSÚ/RN | CNPJ: 24.413.345/0001-35</p>
+            <p>Av. Senador João Câmara, 1236 – Dom Elizeu, ASSÚ/RN | CNPJ: 24.413.345/0001-35</p>
             <p>Emitido em {new Date().toLocaleDateString('pt-BR')}</p>
           </div>
         </div>
