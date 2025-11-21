@@ -138,7 +138,7 @@ export default function OsEdit() {
               }
             }}
           >Salvar alterações</button>
-          <button className="btn btn-secondary" onClick={() => navigate('/os')}>Voltar</button>
+          <button className="btn btn-secondary" onClick={() => navigate('/')}>Voltar</button>
           <PrintOS venda={venda} tipoServico={tipoServico} observacaoLoja={obsLoja} observacaoCliente={obsCliente} />
         </div>
 
