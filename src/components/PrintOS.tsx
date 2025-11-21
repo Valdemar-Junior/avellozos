@@ -55,13 +55,13 @@ export default function PrintOS({ venda, tipoServico, observacaoLoja, observacao
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div>
                 <p className="font-medium">AVELLOZ ASSU</p>
-                <p>Av. Senador João Câmara, Centro</p>
-                <p>Assu - RN</p>
+                <p>Av. Senador João Câmara, 1236 – Dom Eliseu</p>
+                <p>ASSÚ/RN</p>
               </div>
               <div>
                 <p className="font-medium">Contato</p>
-                <p>(84) 9 9999-9999</p>
-                <p>contato@avellozassu.com.br</p>
+                <p>(84) 9 8683-9734</p>
+                <p>avelloz@lojaodosmoveis.shop</p>
               </div>
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function PrintOS({ venda, tipoServico, observacaoLoja, observacao
 
           {/* Rodapé */}
           <div className="mt-8 text-center text-xs text-gray-500">
-            <p>Av. Senador João Câmara, Centro - Assu/RN | CNPJ: 00.000.000/0001-00</p>
+            <p>Av. Senador João Câmara, 1236 – Dom Eliseu, ASSÚ/RN | CNPJ: 24.413.345/0001-35</p>
             <p>Emitido em {new Date().toLocaleDateString('pt-BR')}</p>
           </div>
         </div>
